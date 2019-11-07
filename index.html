@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <style>
+        .main-form {
+            height: 200px;
+        }
+        #display-this1 {
+            display: none;
+        }
+        #display-this2 {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="container">
+            <h1 class="text-center">Handwritten Digit Prediction</h1>
+    </header>
+    <hr>
+    <main class="container bg-light">
+        <div class="container main-form">
+                <img src="" alt="" id="selected-image" height="200px" width="200px" style="float: right;border: 2px solid black;">
+            <div class="form-group w-50">
+                    <label for="#image-selector">Upload your file :</label>
+                    <input class="form-control-file" type="file" id="image-selector">
+            </div>
+            
+            <br>
+            <button class="btn btn-outline-primary" id="predict-button">Predict</button>
+        </div>
+        <hr>
+        <div class="container" id="display-this1">
+            <h3>Prediction Percentage</h3>
+            <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center">
+                    0 : <span class="" id="0"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    1 : <span class="" id="1"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    2 : <span class="" id="2"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    3 : <span class="" id="3"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    4 : <span class="" id="4"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    5 : <span class="" id="5"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    6 : <span class="" id="6"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    7 : <span class="" id="7"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    8 : <span class="" id="8"></span>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                    9 : <span class="" id="9"></span>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="container" id="display-this2">
+            <p class="h4">Given Image is : <span id="abc" class="badge badge-primary">
+
+            </span> with probability of : <span class="badge badge-primary" id="per"></span></p>
+        </div>
+    </main>
+
+
+    
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
